@@ -115,6 +115,7 @@ const Contact = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <motion.span 
+              variants={itemVariants}
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
               style={{
                 background: 'rgba(236, 72, 153, 0.1)',
