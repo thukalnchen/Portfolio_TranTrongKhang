@@ -43,7 +43,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       transition: { 
         duration: 0.6,
         delay: index * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     },
   };
@@ -283,13 +283,13 @@ const Projects = () => {
       filter: 'blur(0px)',
       transition: { 
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     },
   };
 
   return (
-    <section id="projects" className="relative overflow-hidden" style={{ zIndex: 10 }}>
+    <section id="projects" className="relative overflow-hidden py-20 lg:py-28" style={{ zIndex: 10 }}>
       {/* Aurora Section Divider */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500" />
 
@@ -327,7 +327,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid - Bento Style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={project.title} project={project} index={index} />
             ))}
@@ -336,7 +336,7 @@ const Projects = () => {
           {/* View More Section */}
           <motion.div
             variants={itemVariants}
-            className="mt-16 text-center"
+            className="mt-12 lg:mt-16 text-center"
           >
             <div className="inline-block relative group">
               {/* Glow Effect */}
@@ -345,7 +345,7 @@ const Projects = () => {
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 group-hover:border-white/20 transition-all">
                 <p className="text-gray-400 mb-6">Interested in seeing more of my work?</p>
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/thukalnchen"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-black"

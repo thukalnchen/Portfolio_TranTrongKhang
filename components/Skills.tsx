@@ -116,7 +116,7 @@ const Skills = () => {
       filter: 'blur(0px)',
       transition: { 
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     },
   };
@@ -130,13 +130,13 @@ const Skills = () => {
       transition: {
         delay: i * 0.05,
         duration: 0.4,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     }),
   };
 
   return (
-    <section id="skills" className="relative overflow-hidden" style={{ zIndex: 10 }}>
+    <section id="skills" className="relative overflow-hidden py-20 lg:py-28" style={{ zIndex: 10 }}>
       {/* Aurora Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl animate-pulse" />
@@ -152,7 +152,7 @@ const Skills = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <motion.div variants={itemVariants} className="text-center mb-16">
             <motion.span 
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
               style={{

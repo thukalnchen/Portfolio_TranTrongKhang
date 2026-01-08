@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter, FiCheck, FiClock, FiMessageCircle } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin, FiCheck, FiClock, FiMessageCircle } from 'react-icons/fi';
+import { FaFacebookF } from 'react-icons/fa';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -48,14 +49,14 @@ const Contact = () => {
     {
       icon: FiMail,
       title: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'khanggialata@gmail.com',
+      href: 'mailto:khanggialata@gmail.com',
       gradient: 'from-emerald-500 to-cyan-500',
     },
     {
       icon: FiMapPin,
       title: 'Location',
-      value: 'Your City, Country',
+      value: 'Ho Chi Minh City, Vietnam',
       href: '#',
       gradient: 'from-cyan-500 to-purple-500',
     },
@@ -69,12 +70,12 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com', label: 'GitHub', color: '#ffffff' },
-    { icon: FiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: FiTwitter, href: 'https://twitter.com', label: 'Twitter', color: '#1DA1F2' },
+    { icon: FiGithub, href: 'https://github.com/thukalnchen', label: 'GitHub', color: '#ffffff' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/tran-trong-khang/', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: FaFacebookF, href: 'https://www.facebook.com/thukalnchin', label: 'Facebook', color: '#1877F2' },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -84,18 +85,18 @@ const Contact = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30, filter: 'blur(10px)' },
     visible: {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
-      transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+      transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
     },
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden" style={{ zIndex: 10 }}>
+    <section id="contact" className="relative overflow-hidden py-20 lg:py-28" style={{ zIndex: 10 }}>
       {/* Aurora Section Divider */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500" />
       
@@ -134,14 +135,14 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
             {/* Contact Info Card */}
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="relative group" data-cursor-hover>
                 {/* Aurora Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-purple-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
-                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-8 group-hover:border-white/20 transition-all duration-300">
+                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 lg:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500">
                       <FiMessageCircle size={24} className="text-black" />
@@ -151,33 +152,33 @@ const Contact = () => {
                     </h3>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {contactInfo.map((info, index) => (
                       <motion.a
                         key={info.title}
                         href={info.href}
-                        className="flex items-start gap-4 p-4 bg-black/30 rounded-xl hover:bg-black/40 transition-all group/item border border-white/5 hover:border-white/10"
-                        whileHover={{ x: 5, scale: 1.02 }}
+                        className="flex items-center gap-3 p-3 bg-black/30 rounded-xl hover:bg-black/40 transition-all group/item border border-white/5 hover:border-white/10"
+                        whileHover={{ x: 3, scale: 1.01 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                       >
                         <motion.div 
-                          className={`p-3 bg-gradient-to-r ${info.gradient} rounded-xl`}
+                          className={`p-2.5 bg-gradient-to-r ${info.gradient} rounded-lg flex-shrink-0`}
                           whileHover={{ rotate: 10, scale: 1.1 }}
                           transition={{ type: 'spring', stiffness: 300 }}
                         >
-                          <info.icon size={20} className="text-black" />
+                          <info.icon size={18} className="text-black" />
                         </motion.div>
-                        <div>
-                          <p className="text-gray-500 text-sm">{info.title}</p>
-                          <p className="text-white font-medium">{info.value}</p>
+                        <div className="min-w-0">
+                          <p className="text-gray-500 text-xs">{info.title}</p>
+                          <p className="text-white font-medium text-sm truncate">{info.value}</p>
                         </div>
                       </motion.a>
                     ))}
                   </div>
 
                   {/* Social Links */}
-                  <div className="mt-8 pt-6 border-t border-white/10">
-                    <p className="text-gray-500 text-sm mb-4">Connect with me</p>
+                  <div className="mt-6 pt-5 border-t border-white/10">
+                    <p className="text-gray-500 text-sm mb-3">Connect with me</p>
                     <div className="flex gap-3">
                       {socialLinks.map((social) => (
                         <motion.a
@@ -199,7 +200,7 @@ const Contact = () => {
                   </div>
 
                   {/* Availability Status */}
-                  <div className="mt-6 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
+                  <div className="mt-5 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
                     <div className="flex items-center gap-3">
                       <span className="relative flex h-3 w-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -218,7 +219,7 @@ const Contact = () => {
                 {/* Aurora Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
-                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-8 group-hover:border-white/20 transition-all duration-300">
+                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 lg:p-8 group-hover:border-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold mb-2">Send Me a Message</h3>
                   <p className="text-gray-500 mb-6">Fill out the form below and I'll get back to you soon.</p>
                   

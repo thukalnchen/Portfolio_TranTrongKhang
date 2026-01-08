@@ -42,9 +42,9 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: FiGithub, href: 'https://github.com/thukalnchen', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/tran-trong-khang/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:khanggialata@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -76,7 +76,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="text-xl md:text-2xl font-bold gradient-text relative z-10">
-                ThuKaLn
+                Thukaln
               </span>
               {/* Logo Glow */}
               <motion.div

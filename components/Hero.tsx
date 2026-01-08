@@ -104,7 +104,7 @@ const Hero = () => {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
-      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
     },
   };
 
@@ -117,7 +117,7 @@ const Hero = () => {
       transition: {
         delay: i * 0.05,
         duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     }),
   };
@@ -241,7 +241,7 @@ const Hero = () => {
           >
             <span className="text-gray-100">Hi, I'm</span>{' '}
             <br className="hidden sm:block" />
-            <span className="inline-flex flex-wrap">
+            <span className="inline-flex whitespace-nowrap">
               {name.split('').map((letter, i) => (
                 <motion.span
                   key={i}

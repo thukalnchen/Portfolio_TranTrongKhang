@@ -26,9 +26,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: <FiGithub className="w-5 h-5" />, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: <FiLinkedin className="w-5 h-5" />, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: <FiMail className="w-5 h-5" />, href: 'mailto:your@email.com', label: 'Email' },
+    { icon: <FiGithub className="w-5 h-5" />, href: 'https://github.com/thukalnchen', label: 'GitHub' },
+    { icon: <FiLinkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/tran-trong-khang/', label: 'LinkedIn' },
+    { icon: <FiMail className="w-5 h-5" />, href: 'mailto:khanggialata@gmail.com', label: 'Email' },
   ];
 
   const quickLinks = [
@@ -47,11 +47,11 @@ const Footer = () => {
   return (
     <footer 
       ref={containerRef}
-      className="relative overflow-hidden"
+      className="relative overflow-hidden pt-16 pb-8"
       style={{ zIndex: 10 }}
     >
       {/* Aurora gradient top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent opacity-50" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500" />
       
       {/* Background with aurora effect */}
       <div className="absolute inset-0 bg-[var(--surface)]/80 backdrop-blur-md" />
@@ -60,9 +60,9 @@ const Footer = () => {
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[var(--secondary)]/20 rounded-full blur-[100px]" />
       </div>
 
-      <div className="container-custom py-12 relative">
+      <div className="container-custom relative">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-10">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ const Footer = () => {
             className="space-y-4"
           >
             <h3 className="text-2xl font-bold">
-              <span className="gradient-text">ThuKaLn</span>
+              <span className="gradient-text">Thukaln</span>
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Crafting digital experiences with passion and precision. 
@@ -188,7 +188,7 @@ const Footer = () => {
             and lots of 
             <FiCoffee className="text-[var(--secondary)]" />
             by{' '}
-            <span className="gradient-text font-semibold">ThuKaLn</span>
+            <span className="gradient-text font-semibold">Thukaln</span>
           </p>
           
           <p className="text-gray-500 text-sm">

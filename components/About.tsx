@@ -153,7 +153,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative overflow-hidden" style={{ zIndex: 10 }}>
+    <section id="about" className="relative overflow-hidden py-20 lg:py-28" style={{ zIndex: 10 }}>
       {/* Aurora Section Divider */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500" style={{ zIndex: 1 }}></div>
       
@@ -191,7 +191,7 @@ const About = () => {
           </motion.div>
 
           {/* Stats Section */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-20">
+          <motion.div variants={itemVariants} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -216,7 +216,7 @@ const About = () => {
           </motion.div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
             {cards.map((card, index) => (
               <TiltCard key={card.title} className="h-full perspective-1000">
                 <motion.div
@@ -278,13 +278,13 @@ const About = () => {
           {/* Journey Section */}
           <motion.div
             variants={itemVariants}
-            className="relative group mt-8"
+            className="relative group"
             data-cursor-hover
           >
             {/* Aurora Glow */}
             <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700" />
             
-            <div className="relative bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 group-hover:border-white/20 transition-all duration-300 overflow-hidden">
+            <div className="relative bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 group-hover:border-white/20 transition-all duration-300 overflow-hidden">
               {/* Animated Background Pattern */}
               <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
@@ -293,7 +293,7 @@ const About = () => {
                 }} />
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start relative">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start relative">
                 {/* Text Content */}
                 <div className="order-2 lg:order-1">
                   <motion.span 
