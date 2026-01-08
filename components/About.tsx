@@ -200,16 +200,16 @@ const About = () => {
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-3 sm:p-4 md:p-6 text-center group-hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 text-center group-hover:border-emerald-500/30 transition-all duration-300">
                   <motion.div
-                    className={`inline-flex p-2 sm:p-3 rounded-xl bg-gradient-to-br ${stat.bg} mb-2 sm:mb-4`}
+                    className={`inline-flex p-2.5 sm:p-3 rounded-xl bg-gradient-to-br ${stat.bg} mb-3 sm:mb-4`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
                     <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`} />
                   </motion.div>
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                  <p className="text-gray-400 text-sm mt-2">{stat.label}</p>
+                  <p className="text-gray-400 text-xs sm:text-sm mt-2 sm:mt-3">{stat.label}</p>
                 </div>
               </motion.div>
             ))}
@@ -231,29 +231,29 @@ const About = () => {
                   <div className={`absolute -inset-1 bg-gradient-to-r ${card.gradient} rounded-2xl opacity-0 group-hover:opacity-30 blur-2xl transition-all duration-500`} />
                   
                   {/* Card Content */}
-                  <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 md:p-10 h-full group-hover:border-white/20 group-hover:bg-white/[0.08] transition-all duration-300"
+                  <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 h-full group-hover:border-white/20 group-hover:bg-white/[0.08] transition-all duration-300"
                     style={{ transformStyle: 'preserve-3d' }}
                   >
                     {/* Floating Icon */}
                     <motion.div 
-                      className="mb-6"
+                      className="mb-4 sm:mb-5"
                       style={{ transform: 'translateZ(40px)' }}
                     >
                       <motion.div 
-                        className={`inline-flex p-4 ${card.iconBg} rounded-xl shadow-lg`}
+                        className={`inline-flex p-3 sm:p-4 ${card.iconBg} rounded-xl shadow-lg`}
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6, type: 'spring' }}
                       >
-                        <card.icon size={28} className="text-white" />
+                        <card.icon size={24} className="text-white sm:w-7 sm:h-7" />
                       </motion.div>
                     </motion.div>
                     
                     {/* Text Content */}
-                    <div style={{ transform: 'translateZ(20px)' }}>
-                      <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-300 transition-colors">
+                    <div style={{ transform: 'translateZ(20px)' }} className="pl-1">
+                      <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-emerald-300 transition-colors">
                         {card.title}
                       </h3>
-                      <p className="text-gray-400 leading-relaxed">{card.description}</p>
+                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{card.description}</p>
                     </div>
                     
                     {/* Shine Effect */}
@@ -293,18 +293,18 @@ const About = () => {
                 }} />
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start relative">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start relative">
                 {/* Text Content */}
-                <div className="order-2 lg:order-1">
+                <div className="order-2 lg:order-1 pl-1 sm:pl-2">
                   <motion.span 
-                    className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+                    className="inline-block px-3 py-1.5 rounded-full text-xs font-medium mb-4 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                   >
                     My Story
                   </motion.span>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 gradient-text">My Journey</h3>
-                  <div className="space-y-3 md:space-y-4 text-gray-400 text-sm md:text-base">
+                  <div className="space-y-4 md:space-y-5 text-gray-400 text-sm md:text-base pl-1">
                     <p className="leading-relaxed">
-                      I'm currently pursuing a degree in Software Engineering at [Your University]. 
+                      I'm currently pursuing a degree in Software Engineering at <span className="text-purple-400">HUFLIT University</span>. 
                       My journey in tech started with a curiosity about how things work, which evolved 
                       into a passion for creating solutions that make a difference.
                     </p>
@@ -321,7 +321,7 @@ const About = () => {
                 </div>
                 
                 {/* Info Cards */}
-                <div className="space-y-3 md:space-y-4 order-1 lg:order-2">
+                <div className="space-y-3 sm:space-y-4 order-1 lg:order-2">
                   {[
                     { label: 'Year', value: '3rd Year', color: 'emerald' },
                     { label: 'Major', value: 'Software Engineering', color: 'cyan' },
@@ -335,9 +335,9 @@ const About = () => {
                       transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                       className="group/item"
                     >
-                      <div className="bg-black/60 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-black/70">
+                      <div className="bg-black/60 backdrop-blur-sm rounded-xl px-5 py-4 sm:px-6 sm:py-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-black/70">
                         <div className="flex justify-between items-center gap-4">
-                          <span className="text-gray-400 text-sm md:text-base">{item.label}</span>
+                          <span className="text-gray-400 text-sm md:text-base pl-1">{item.label}</span>
                           <span className={`font-bold text-sm md:text-base ${
                             item.isStatus 
                               ? 'text-emerald-400 flex items-center gap-2' 

@@ -137,17 +137,17 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           </div>
 
           {/* Content */}
-          <div className="p-6 relative" style={{ transform: 'translateZ(20px)' }}>
+          <div className="p-5 sm:p-6 md:p-7 relative" style={{ transform: 'translateZ(20px)' }}>
             {/* Title */}
-            <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-cyan-400 transition-all duration-300">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-cyan-400 transition-all duration-300 pl-1">
               {project.title}
             </h3>
             
             {/* Description */}
-            <p className="text-gray-400 mb-5 leading-relaxed">{project.description}</p>
+            <p className="text-gray-400 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base pl-1">{project.description}</p>
 
             {/* Tags with hover effect */}
-            <div className="flex flex-wrap gap-2 mb-5">
+            <div className="flex flex-wrap gap-2 mb-4 sm:mb-5 pl-1">
               {project.tags.map((tag, tagIndex) => (
                 <motion.span
                   key={tag}
@@ -163,19 +163,19 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             </div>
 
             {/* Stats Row */}
-            <div className="flex items-center gap-4 mb-5 text-gray-500 text-sm">
-              <span className="flex items-center gap-1">
+            <div className="flex items-center gap-4 mb-4 sm:mb-5 text-gray-500 text-sm pl-1">
+              <span className="flex items-center gap-1.5">
                 <FiStar size={14} className="text-yellow-500" />
                 {project.stars}
               </span>
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-1.5">
                 <FiGitBranch size={14} className="text-purple-400" />
                 {project.forks}
               </span>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               <motion.a
                 href={project.github}
                 target="_blank"

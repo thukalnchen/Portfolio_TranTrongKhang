@@ -279,23 +279,23 @@ const Skills = () => {
                       {/* Aurora Glow */}
                       <div className={`absolute -inset-1 bg-gradient-to-r ${category.gradient} rounded-2xl opacity-0 group-hover/card:opacity-20 blur-2xl transition-all duration-500`} />
                       
-                      <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full group-hover/card:border-white/20 group-hover/card:bg-white/[0.08] transition-all duration-300">
+                      <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 h-full group-hover/card:border-white/20 group-hover/card:bg-white/[0.08] transition-all duration-300">
                         {/* Category Header */}
-                        <div className="flex items-center gap-3 mb-6">
+                        <div className="flex items-center gap-3 mb-5 sm:mb-6 pl-1">
                           <motion.div 
-                            className={`p-3 rounded-xl bg-gradient-to-r ${category.gradient}`}
+                            className={`p-2.5 sm:p-3 rounded-xl bg-gradient-to-r ${category.gradient}`}
                             whileHover={{ rotate: 360, scale: 1.1 }}
                             transition={{ duration: 0.5 }}
                           >
-                            <category.icon size={24} className="text-black" />
+                            <category.icon size={20} className="text-black sm:w-6 sm:h-6" />
                           </motion.div>
-                          <h3 className="text-2xl font-bold gradient-text">
+                          <h3 className="text-xl sm:text-2xl font-bold gradient-text">
                             {category.title}
                           </h3>
                         </div>
 
                         {/* Skills */}
-                        <div className="space-y-4">
+                        <div className="space-y-3 sm:space-y-4 pl-1">
                           {category.skills.map((skill, skillIndex) => (
                             <motion.div
                               key={skill.name}
@@ -306,16 +306,17 @@ const Skills = () => {
                               className="group relative"
                               data-cursor-hover
                             >
-                              <div className="flex items-center gap-4 p-3 rounded-xl bg-black/20 border border-white/5 hover:border-white/10 transition-all hover:bg-black/30">
+                              <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-black/20 border border-white/5 hover:border-white/10 transition-all hover:bg-black/30">
                                 {/* Icon */}
                                 <motion.div 
-                                  className="relative"
+                                  className="relative flex-shrink-0"
                                   whileHover={{ scale: 1.2, rotate: 10 }}
                                   transition={{ type: 'spring', stiffness: 300 }}
                                 >
                                   <skill.icon
-                                    size={32}
+                                    size={28}
                                     style={{ color: skill.color }}
+                                    className="sm:w-8 sm:h-8"
                                   />
                                   <div
                                     className="absolute inset-0 blur-lg opacity-0 group-hover:opacity-50 transition-opacity"
