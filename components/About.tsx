@@ -28,7 +28,7 @@ const AnimatedCounter = ({ target, duration = 2, suffix = '' }: { target: number
   }, [inView, target, duration]);
 
   return (
-    <span ref={ref} className="gradient-text font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+    <span ref={ref} className="gradient-text font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
       {count}{suffix}
     </span>
   );
@@ -171,7 +171,7 @@ const About = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-10 md:mb-16">
             <motion.span 
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
               style={{
@@ -191,7 +191,7 @@ const About = () => {
           </motion.div>
 
           {/* Stats Section */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
+          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-10 md:mb-16">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -200,13 +200,13 @@ const About = () => {
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 md:p-6 text-center group-hover:border-emerald-500/30 transition-all duration-300">
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-3 sm:p-4 md:p-6 text-center group-hover:border-emerald-500/30 transition-all duration-300">
                   <motion.div
-                    className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${stat.bg} mb-4`}
+                    className={`inline-flex p-2 sm:p-3 rounded-xl bg-gradient-to-br ${stat.bg} mb-2 sm:mb-4`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                    <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`} />
                   </motion.div>
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   <p className="text-gray-400 text-sm mt-2">{stat.label}</p>
@@ -216,7 +216,7 @@ const About = () => {
           </motion.div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 md:mb-16">
             {cards.map((card, index) => (
               <TiltCard key={card.title} className="h-full perspective-1000">
                 <motion.div

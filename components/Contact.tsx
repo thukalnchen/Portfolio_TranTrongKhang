@@ -114,7 +114,7 @@ const Contact = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-10 md:mb-16">
             <motion.span 
               variants={itemVariants}
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
@@ -135,19 +135,19 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 xl:grid-cols-5 gap-6 xl:gap-8">
             {/* Contact Info Card */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <div className="relative group" data-cursor-hover>
+            <motion.div variants={itemVariants} className="xl:col-span-2">
+              <div className="relative group h-full" data-cursor-hover>
                 {/* Aurora Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-purple-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
-                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 lg:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500">
-                      <FiMessageCircle size={24} className="text-black" />
+                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 xl:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500">
+                      <FiMessageCircle size={20} className="text-black sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold gradient-text">
+                    <h3 className="text-xl sm:text-2xl font-bold gradient-text">
                       Contact Info
                     </h3>
                   </div>
@@ -214,14 +214,14 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <div className="relative group" data-cursor-hover>
+            <motion.div variants={itemVariants} className="xl:col-span-3">
+              <div className="relative group h-full" data-cursor-hover>
                 {/* Aurora Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
-                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 lg:p-8 group-hover:border-white/20 transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-2">Send Me a Message</h3>
-                  <p className="text-gray-500 mb-6">Fill out the form below and I'll get back to you soon.</p>
+                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 xl:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Send Me a Message</h3>
+                  <p className="text-gray-500 text-sm mb-5 sm:mb-6">Fill out the form below and I'll get back to you soon.</p>
                   
                   <AnimatePresence mode="wait">
                     {isSuccess ? (

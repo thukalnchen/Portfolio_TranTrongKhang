@@ -152,7 +152,7 @@ const Skills = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-10 md:mb-16">
             <motion.span 
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
               style={{
@@ -171,10 +171,10 @@ const Skills = () => {
             </p>
             
             {/* Toggle Button - Aurora Style */}
-            <motion.div className="flex justify-center gap-4">
+            <motion.div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               <motion.button
                 onClick={() => setShow3D(true)}
-                className={`relative px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2 ${
+                className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all flex items-center gap-2 text-sm sm:text-base ${
                   show3D 
                     ? 'text-black' 
                     : 'text-gray-400 hover:text-white bg-white/5 border border-white/10'
@@ -189,7 +189,7 @@ const Skills = () => {
               </motion.button>
               <motion.button
                 onClick={() => setShow3D(false)}
-                className={`relative px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2 ${
+                className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all flex items-center gap-2 text-sm sm:text-base ${
                   !show3D 
                     ? 'text-black' 
                     : 'text-gray-400 hover:text-white bg-white/5 border border-white/10'
@@ -214,7 +214,7 @@ const Skills = () => {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: -20 }}
                 transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="mb-16"
+                className="mb-10 md:mb-16"
               >
                 <TechKeyboard3D />
               </motion.div>

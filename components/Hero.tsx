@@ -128,7 +128,7 @@ const Hero = () => {
     <section
       id="home"
       ref={containerRef}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-10"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden py-20 lg:py-10"
       style={{ zIndex: 10 }}
     >
       {/* Aurora Animated Background */}
@@ -191,7 +191,7 @@ const Hero = () => {
       />
 
       {/* Main Content - Two Column Layout */}
-      <div className="container-custom relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 items-center" style={{ zIndex: 20 }}>
+      <div className="container-custom relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center" style={{ zIndex: 20 }}>
         
         {/* Left Column - Text Content */}
         <motion.div
@@ -383,7 +383,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="w-full h-[550px] lg:h-[650px] xl:h-[700px] relative"
+          className="w-full h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[650px] relative order-first lg:order-last"
           style={{
             perspective: 1000,
           }}

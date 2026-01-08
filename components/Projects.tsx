@@ -307,7 +307,7 @@ const Projects = () => {
           animate={inView ? 'visible' : 'hidden'}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-10 md:mb-16">
             <motion.span 
               className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
               style={{
@@ -327,7 +327,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid - Bento Style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={project.title} project={project} index={index} />
             ))}
@@ -336,13 +336,13 @@ const Projects = () => {
           {/* View More Section */}
           <motion.div
             variants={itemVariants}
-            className="mt-12 lg:mt-16 text-center"
+            className="mt-10 md:mt-12 lg:mt-16 text-center"
           >
             <div className="inline-block relative group">
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
               
-              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 group-hover:border-white/20 transition-all">
+              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 group-hover:border-white/20 transition-all">
                 <p className="text-gray-400 mb-6">Interested in seeing more of my work?</p>
                 <motion.a
                   href="https://github.com/thukalnchen"
