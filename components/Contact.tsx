@@ -142,8 +142,8 @@ const Contact = () => {
                 {/* Aurora Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-purple-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
-                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-6 sm:px-7 sm:py-7 xl:px-8 xl:py-8 group-hover:border-white/20 transition-all duration-300 h-full">
-                  <div className="flex items-center gap-3 mb-5">
+                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-7 xl:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
+                  <div className="flex items-center gap-3 mb-6">
                     <div className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500">
                       <FiMessageCircle size={20} className="text-black sm:w-6 sm:h-6" />
                     </div>
@@ -152,12 +152,12 @@ const Contact = () => {
                     </h3>
                   </div>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {contactInfo.map((info, index) => (
                       <motion.a
                         key={info.title}
                         href={info.href}
-                        className="flex items-center gap-3 p-3 bg-black/30 rounded-xl hover:bg-black/40 transition-all group/item border border-white/5 hover:border-white/10"
+                        className="flex items-center gap-4 p-4 bg-black/30 rounded-xl hover:bg-black/40 transition-all group/item border border-white/5 hover:border-white/10"
                         whileHover={{ x: 3, scale: 1.01 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                       >
@@ -219,9 +219,9 @@ const Contact = () => {
                 {/* Aurora Glow */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
-                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-6 sm:px-7 sm:py-7 xl:px-8 xl:py-8 group-hover:border-white/20 transition-all duration-300 h-full">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Send Me a Message</h3>
-                  <p className="text-gray-500 text-sm mb-5 sm:mb-6">Fill out the form below and I'll get back to you soon.</p>
+                <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-7 xl:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3">Send Me a Message</h3>
+                  <p className="text-gray-500 text-sm mb-6">Fill out the form below and I'll get back to you soon.</p>
                   
                   <AnimatePresence mode="wait">
                     {isSuccess ? (

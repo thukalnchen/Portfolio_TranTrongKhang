@@ -137,14 +137,14 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           </div>
 
           {/* Content */}
-          <div className="px-6 py-5 sm:px-7 sm:py-6 md:px-8 md:py-7 relative" style={{ transform: 'translateZ(20px)' }}>
+          <div className="p-6 sm:p-7 md:p-8 relative" style={{ transform: 'translateZ(20px)' }}>
             {/* Title */}
-            <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-cyan-400 transition-all duration-300">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-cyan-400 transition-all duration-300">
               {project.title}
             </h3>
             
             {/* Description */}
-            <p className="text-gray-400 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base pr-2">{project.description}</p>
+            <p className="text-gray-400 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base">{project.description}</p>
 
             {/* Tags with hover effect */}
             <div className="flex flex-wrap gap-2 mb-4 sm:mb-5">

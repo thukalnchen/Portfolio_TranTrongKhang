@@ -231,12 +231,12 @@ const About = () => {
                   <div className={`absolute -inset-1 bg-gradient-to-r ${card.gradient} rounded-2xl opacity-0 group-hover:opacity-30 blur-2xl transition-all duration-500`} />
                   
                   {/* Card Content */}
-                  <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 h-full group-hover:border-white/20 group-hover:bg-white/[0.08] transition-all duration-300"
+                  <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-7 md:p-8 h-full group-hover:border-white/20 group-hover:bg-white/[0.08] transition-all duration-300"
                     style={{ transformStyle: 'preserve-3d' }}
                   >
                     {/* Floating Icon */}
                     <motion.div 
-                      className="mb-4 sm:mb-5"
+                      className="mb-5 sm:mb-6"
                       style={{ transform: 'translateZ(40px)' }}
                     >
                       <motion.div 
@@ -249,11 +249,11 @@ const About = () => {
                     </motion.div>
                     
                     {/* Text Content */}
-                    <div style={{ transform: 'translateZ(20px)' }} className="px-2">
-                      <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-emerald-300 transition-colors">
+                    <div style={{ transform: 'translateZ(20px)' }}>
+                      <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white group-hover:text-emerald-300 transition-colors">
                         {card.title}
                       </h3>
-                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed pr-1">{card.description}</p>
+                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{card.description}</p>
                     </div>
                     
                     {/* Shine Effect */}
@@ -295,13 +295,13 @@ const About = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start relative">
                 {/* Text Content */}
-                <div className="order-2 lg:order-1 px-2 sm:px-3">
+                <div className="order-2 lg:order-1">
                   <motion.span 
-                    className="inline-block px-3 py-1.5 rounded-full text-xs font-medium mb-4 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+                    className="inline-block px-3 py-1.5 rounded-full text-xs font-medium mb-5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                   >
                     My Story
                   </motion.span>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 gradient-text">My Journey</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 md:mb-6 gradient-text">My Journey</h3>
                   <div className="space-y-4 md:space-y-5 text-gray-400 text-sm md:text-base">
                     <p className="leading-relaxed">
                       I'm currently pursuing a degree in Software Engineering at <span className="text-purple-400">HUFLIT University</span>. 
