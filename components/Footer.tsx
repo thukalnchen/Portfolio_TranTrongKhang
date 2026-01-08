@@ -69,12 +69,12 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-4 sm:col-span-2 lg:col-span-1 pl-1"
+            className="space-y-4 sm:col-span-2 lg:col-span-1 px-2"
           >
             <h3 className="text-2xl font-bold">
               <span className="gradient-text">Thukaln</span>
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed pr-4">
+            <p className="text-gray-400 text-sm leading-relaxed pr-2">
               Crafting digital experiences with passion and precision. 
               Always learning, always building.
             </p>
@@ -104,10 +104,10 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-4 pl-1"
+            className="space-y-4 px-2"
           >
             <h4 className="text-white font-semibold">Quick Links</h4>
-            <nav className="flex flex-wrap gap-x-4 gap-y-2 pl-1">
+            <nav className="flex flex-wrap gap-x-4 gap-y-2">
               {quickLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
@@ -131,10 +131,10 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-4 pl-1"
+            className="space-y-4 px-2"
           >
             <h4 className="text-white font-semibold">Connect</h4>
-            <div className="flex gap-3 pl-1">
+            <div className="flex gap-3">
               {socialLinks.map((link, index) => (
                 <motion.a
                   key={link.label}

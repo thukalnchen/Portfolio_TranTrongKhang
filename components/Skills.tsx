@@ -279,9 +279,9 @@ const Skills = () => {
                       {/* Aurora Glow */}
                       <div className={`absolute -inset-1 bg-gradient-to-r ${category.gradient} rounded-2xl opacity-0 group-hover/card:opacity-20 blur-2xl transition-all duration-500`} />
                       
-                      <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 h-full group-hover/card:border-white/20 group-hover/card:bg-white/[0.08] transition-all duration-300">
+                      <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-6 sm:px-7 sm:py-7 md:px-8 md:py-8 h-full group-hover/card:border-white/20 group-hover/card:bg-white/[0.08] transition-all duration-300">
                         {/* Category Header */}
-                        <div className="flex items-center gap-3 mb-5 sm:mb-6 pl-1">
+                        <div className="flex items-center gap-3 mb-5 sm:mb-6">
                           <motion.div 
                             className={`p-2.5 sm:p-3 rounded-xl bg-gradient-to-r ${category.gradient}`}
                             whileHover={{ rotate: 360, scale: 1.1 }}
@@ -295,7 +295,7 @@ const Skills = () => {
                         </div>
 
                         {/* Skills */}
-                        <div className="space-y-3 sm:space-y-4 pl-1">
+                        <div className="space-y-3 sm:space-y-4">
                           {category.skills.map((skill, skillIndex) => (
                             <motion.div
                               key={skill.name}
@@ -306,7 +306,7 @@ const Skills = () => {
                               className="group relative"
                               data-cursor-hover
                             >
-                              <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-black/20 border border-white/5 hover:border-white/10 transition-all hover:bg-black/30">
+                              <div className="flex items-center gap-3 sm:gap-4 px-4 py-3 sm:px-5 sm:py-4 rounded-xl bg-black/20 border border-white/5 hover:border-white/10 transition-all hover:bg-black/30">
                                 {/* Icon */}
                                 <motion.div 
                                   className="relative flex-shrink-0"

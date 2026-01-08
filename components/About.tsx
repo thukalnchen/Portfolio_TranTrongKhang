@@ -249,11 +249,11 @@ const About = () => {
                     </motion.div>
                     
                     {/* Text Content */}
-                    <div style={{ transform: 'translateZ(20px)' }} className="pl-1">
+                    <div style={{ transform: 'translateZ(20px)' }} className="px-2">
                       <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-emerald-300 transition-colors">
                         {card.title}
                       </h3>
-                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{card.description}</p>
+                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed pr-1">{card.description}</p>
                     </div>
                     
                     {/* Shine Effect */}
@@ -295,14 +295,14 @@ const About = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start relative">
                 {/* Text Content */}
-                <div className="order-2 lg:order-1 pl-1 sm:pl-2">
+                <div className="order-2 lg:order-1 px-2 sm:px-3">
                   <motion.span 
                     className="inline-block px-3 py-1.5 rounded-full text-xs font-medium mb-4 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                   >
                     My Story
                   </motion.span>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 gradient-text">My Journey</h3>
-                  <div className="space-y-4 md:space-y-5 text-gray-400 text-sm md:text-base pl-1">
+                  <div className="space-y-4 md:space-y-5 text-gray-400 text-sm md:text-base">
                     <p className="leading-relaxed">
                       I'm currently pursuing a degree in Software Engineering at <span className="text-purple-400">HUFLIT University</span>. 
                       My journey in tech started with a curiosity about how things work, which evolved 
@@ -335,9 +335,9 @@ const About = () => {
                       transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                       className="group/item"
                     >
-                      <div className="bg-black/60 backdrop-blur-sm rounded-xl px-5 py-4 sm:px-6 sm:py-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-black/70">
+                      <div className="bg-black/60 backdrop-blur-sm rounded-xl px-6 py-4 sm:px-7 sm:py-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-black/70">
                         <div className="flex justify-between items-center gap-4">
-                          <span className="text-gray-400 text-sm md:text-base pl-1">{item.label}</span>
+                          <span className="text-gray-400 text-sm md:text-base">{item.label}</span>
                           <span className={`font-bold text-sm md:text-base ${
                             item.isStatus 
                               ? 'text-emerald-400 flex items-center gap-2' 
