@@ -281,7 +281,7 @@ const Skills = () => {
                       
                       <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-7 md:p-8 h-full group-hover/card:border-white/20 group-hover/card:bg-white/[0.08] transition-all duration-300">
                         {/* Category Header */}
-                        <div className="flex items-center gap-3 mb-6">
+                        <div className="flex items-center gap-3 mb-6 ml-2">
                           <motion.div 
                             className={`p-2.5 sm:p-3 rounded-xl bg-gradient-to-r ${category.gradient}`}
                             whileHover={{ rotate: 360, scale: 1.1 }}
@@ -295,7 +295,7 @@ const Skills = () => {
                         </div>
 
                         {/* Skills */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 mx-3">
                           {category.skills.map((skill, skillIndex) => (
                             <motion.div
                               key={skill.name}
@@ -370,7 +370,7 @@ const Skills = () => {
                 <span className="text-4xl">🚀</span>
               </motion.div>
               <h3 className="text-2xl font-bold mb-3 gradient-text">Always Learning</h3>
-              <p className="text-gray-400 max-w-2xl mx-auto">
+              <p className="text-gray-400 max-w-2xl mx-auto px-4">
                 I'm constantly expanding my skill set and staying up-to-date with the latest technologies
                 in the software development ecosystem. Currently exploring <span className="text-emerald-400">AI/ML</span>, 
                 <span className="text-cyan-400"> Cloud Architecture</span>, and <span className="text-purple-400">Web3</span>.

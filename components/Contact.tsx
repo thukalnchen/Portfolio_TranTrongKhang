@@ -143,7 +143,7 @@ const Contact = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-purple-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
                 <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-7 xl:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
-                  <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center gap-3 mb-6 ml-2">
                     <div className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500">
                       <FiMessageCircle size={20} className="text-black sm:w-6 sm:h-6" />
                     </div>
@@ -152,7 +152,7 @@ const Contact = () => {
                     </h3>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-4 mx-3">
                     {contactInfo.map((info, index) => (
                       <motion.a
                         key={info.title}
@@ -177,8 +177,8 @@ const Contact = () => {
                   </div>
 
                   {/* Social Links */}
-                  <div className="mt-6 pt-5 border-t border-white/10">
-                    <p className="text-gray-500 text-sm mb-3">Connect with me</p>
+                  <div className="mt-6 pt-5 border-t border-white/10 mx-3">
+                    <p className="text-gray-500 text-sm mb-3 ml-1">Connect with me</p>
                     <div className="flex gap-3">
                       {socialLinks.map((social) => (
                         <motion.a
@@ -220,8 +220,8 @@ const Contact = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
                 
                 <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-7 xl:p-8 group-hover:border-white/20 transition-all duration-300 h-full">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3">Send Me a Message</h3>
-                  <p className="text-gray-500 text-sm mb-6">Fill out the form below and I'll get back to you soon.</p>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 ml-3">Send Me a Message</h3>
+                  <p className="text-gray-500 text-sm mb-6 ml-3">Fill out the form below and I'll get back to you soon.</p>
                   
                   <AnimatePresence mode="wait">
                     {isSuccess ? (

@@ -249,11 +249,11 @@ const About = () => {
                     </motion.div>
                     
                     {/* Text Content */}
-                    <div style={{ transform: 'translateZ(20px)' }}>
+                    <div style={{ transform: 'translateZ(20px)' }} className="ml-3 mr-2">
                       <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white group-hover:text-emerald-300 transition-colors">
                         {card.title}
                       </h3>
-                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{card.description}</p>
+                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed ml-1">{card.description}</p>
                     </div>
                     
                     {/* Shine Effect */}
